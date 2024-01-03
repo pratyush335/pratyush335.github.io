@@ -1,4 +1,8 @@
-
+.opaque-background {
+  background-color: rgba(0, 0, 0, 0.7); /* 0.7 represents 70% opacity */
+  padding: 20px; /* Adjust the padding as needed */
+  border-radius: 10px; /* Optional: Add border radius for rounded corners */
+}
 .text-small {
   font-size: 100%;
 }
