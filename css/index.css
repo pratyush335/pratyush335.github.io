@@ -1,3 +1,33 @@
+/* Styling for the pixelated image */
+.pixelated-image {
+  position: absolute;
+  top: 1;
+  right: 0;
+  bottom: 0;
+  height:50%;
+  width: 50%; /* Adjust the width as needed */
+  overflow: hidden;
+  opacity: 1; /* Hidden by default */
+  transition: opacity 0.1s; /* Add smooth transition effect */
+}
+
+.pixelated-image img {
+  width: 70%;
+  height: 70%;
+  filter: blur(10px); /* Initial pixelation effect, adjust as needed */
+  transition: filter 0.5s; /* Add smooth transition effect */
+}
+
+/* Show image on hover with no pixelation */
+.pixelated-image:hover img {
+  filter: blur(0);
+}
+
+.icon-image {
+  width: 90px; /* Adjust the width as needed */
+  height: auto; /* Maintain aspect ratio */
+}
+
 .opaque-background {
   background-color: rgba(0, 0, 0, 0.7); /* 0.7 represents 70% opacity */
   padding: 20px; /* Adjust the padding as needed */
