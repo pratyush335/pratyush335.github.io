@@ -208,14 +208,6 @@
     </div>
 
     <!-- GitHub links below -->
-	<div class="text-center filter-buttons">
-	  <button class="btn btn-primary btn-xl filter-button" data-filter="all">All</button>
-	  <button class="btn btn-primary btn-xl filter-button" data-filter="nlp">NLP</button>
-	  <button class="btn btn-primary btn-xl filter-button" data-filter="machine-learning">Machine Learning</button>
-	  <button class="btn btn-primary btn-xl filter-button" data-filter="optimization">Optimization</button>
-	  <button class="btn btn-primary btn-xl filter-button" data-filter="market-research">Market Research</button>
-	  <button class="btn btn-primary btn-xl filter-button" data-filter="medium-articles">Medium Articles</button>
-	</div>
     <div class="container-fluid p-0"> 
       <div class="row no-gutters">
 
@@ -227,7 +219,7 @@
 				-->
 
         <!-- Source to recommendation system coding -->
-        <div class="col-lg-4 col-sm-6 project nlp machine-learning medium-articles">
+        <div class="col-lg-4 col-sm-6">
           <a class="portfolio-box" target="_blank" href="https://github.com/pratyush335/Mood-Based-Song-Recommender">
             <img class="img-responsive" width="100%" height="auto" src="img/portfolio/mood-music-recommendation.jpeg" alt="">
             <div class="portfolio-box-caption">
@@ -245,7 +237,7 @@
         </div>
 
         <!-- Second Link: Sentiment analysis of News Headlines -->
-        <div class="col-lg-4 col-sm-6 project nlp medium-articles">
+        <div class="col-lg-4 col-sm-6">
           <a class="portfolio-box" target="_blank" href="https://github.com/pratyush335/Luxury-Sedan-Brand-Analysis">
             <img class="img-responsive" width="100%" height="auto" src="img/portfolio/car-brand-association.jpeg" alt="">
             <div class="portfolio-box-caption">
@@ -262,7 +254,7 @@
 		  <p>Check out the <a href="https://medium.com/@pratyush335/leveraging-social-media-text-analytics-to-generate-insights-for-the-us-entry-level-luxury-car-c86e8b6c313d" target="_blank">Medium blog</a>!</p>
         </div>
 		
-		<div class="col-lg-4 col-sm-6 project optimization">
+		<div class="col-lg-4 col-sm-6">
           <a class="portfolio-box" target="_blank" href="">
             <img class="img-responsive" width="100%" height="auto" src="img/portfolio/tsp.jpeg" alt="">
             <div class="portfolio-box-caption">
@@ -279,7 +271,7 @@
 		  <p>Check out the <a href="" target="_blank">Medium blog</a>!</p>
         </div>
 		
-        <div class="col-lg-4 col-sm-6 project machine-learning">
+        <div class="col-lg-4 col-sm-6">
           <a class="portfolio-box" target="_blank" href="https://github.com/pratyush335/Predicting-the-INFLUENCERS">
             <img class="img-responsive" width="100%" height="auto" src="img/portfolio/network.jpg" alt="">
             <div class="portfolio-box-caption">
@@ -289,37 +281,6 @@
                 </div>
                 <div class="project-name text-faded">
                   Leveraged machine learning and network analytics to build a model to predict influencers from twitter activity data of users and quantify their potential financial value.
-                </div>
-              </div>
-            </div>
-          </a>
-        </div>
-		<div class="col-lg-4 col-sm-6 project market-research">
-          <a class="portfolio-box" target="_blank" href="https://www.linkedin.com/feed/update/urn:li:activity:7186138500633706496/">
-            <img class="img-responsive" width="100%" height="auto" src="img/portfolio/gofresh.jpg" alt="">
-            <div class="portfolio-box-caption">
-              <div class="portfolio-box-caption-content">
-                <div class="project-category">
-                  <b> Pricing Strategy for a Meal-kit Delivery Company </b>
-                </div>
-                <div class="project-name text-faded">
-                  Designed a pricing strategy for a meal-kit delivery company targeting graduate students. Collected data from UT Austin graduate students and performed conjoint analysis, to define optimal pricing and identify most preferred products
-                </div>
-              </div>
-            </div>
-          </a>
-        </div>
-		
-		<div class="col-lg-4 col-sm-6 project medium-articles">
-          <a class="portfolio-box" target="_blank" href="https://medium.com/@pratyush335/quick-and-efficient-ways-to-calculate-pairwise-distances-in-python-6fc9e669731e">
-            <img class="img-responsive" width="100%" height="auto" src="img/portfolio/pairwise.jpg" alt="">
-            <div class="portfolio-box-caption">
-              <div class="portfolio-box-caption-content">
-                <div class="project-category">
-                  <b> Pairwise Distances in Python </b>
-                </div>
-                <div class="project-name text-faded">
-                  Article demonstrating some quick and efficient ways to calculate Pairwise Distances in Python
                 </div>
               </div>
             </div>
@@ -415,36 +376,5 @@
   <script src="js/jquery.magnific-popup.min.js"></script>
   <script src="js/creative.min.js"></script>
   
-  <script>
-    // JavaScript for filtering projects and applying zoom and slide effects
-    const filterButtons = document.querySelectorAll('.filter-button');
-    const projects = document.querySelectorAll('.project');
-
-    filterButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            const filterValue = button.getAttribute('data-filter');
-
-            // Zoom out all projects and slide up
-            projects.forEach(project => {
-                project.classList.remove('zoom-in', 'slide-down');
-                project.classList.add('zoom-out', 'slide-up');
-            });
-
-            // Filter and zoom in selected projects after a delay
-            setTimeout(() => {
-                projects.forEach(project => {
-                    if (filterValue === 'all' || project.classList.contains(filterValue)) {
-                        project.style.display = 'block'; // Display the filtered projects
-                        project.classList.remove('zoom-out', 'slide-up');
-                        project.classList.add('zoom-in', 'slide-down');
-                    } else {
-                        project.style.display = 'none'; // Hide the unfiltered projects
-                    }
-                });
-            }, 100); // Adjust the delay (in milliseconds) to match the transition duration
-        });
-    });
-  </script>
-
 </body>
 </html>
